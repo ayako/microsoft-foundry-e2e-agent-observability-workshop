@@ -1,99 +1,101 @@
-# Lab 00: Setup Your Foundry Project
+# Lab 00: Foundry プロジェクトをセットアップする
 
-Follow the steps below to complete the setup of your Microsoft Foundry project.
+以下の手順に沿って、Microsoft Foundry プロジェクトのセットアップを完了してください。
 
 
-## Step 1: Templates Page
+## Step 1: テンプレートページ
 
-1. Visit [https://ai.azure.com/templates](https://ai.azure.com/templates) in the browser.
-1. Log into your Azure account when prompted
-1. You see this screen - click _Start building_
-1. (Alternatively) switch toggle to "New Foundry"
+1. ブラウザーで [https://ai.azure.com/templates](https://ai.azure.com/templates) を開きます。
+1. 求められたら Azure アカウントでサインインします。
+1. この画面が表示されたら、画面右上の _ビルドを開始する_ をクリックします。
+1. （別の方法として）トグルを "New Foundry" に切り替えます。
 
 ![Templates Page](assets/01-templates-page.png)
 
-## Step 2: Select Project
+## Step 2: プロジェクトを選択
 
-You should see a dialog prompting you to select a project to continue
+プロジェクトを選択するダイアログが表示されます。
 
 
 ![Select Project](assets/02-select-project.png)
 
-## Step 3: Create Project
+## Step 3: プロジェクトを作成
 
-Click the input area - you will see the _Create a new project_ option. Select this.
+入力エリアをクリックすると _プロジェクトの作成_ オプションが表示されるので、これを選択します。
 
 ![Create Project](assets/03-create-project.png)
 
-## Step 4: Create Project Details
+## Step 4: プロジェクト詳細を入力
 
-Fill in the project details similar to that shown here.
+以下の例を参考に、プロジェクトの詳細を入力します。
+詳細が表示されない場合は _高度なオプション_ をクリックして表示します。
 
-1. Select "create new resource group"
-1. Use "East US 2" as region by default
-1. Confirm creation.
+1. "新規リソースグループを作成する" を選択します。
+1. リージョンは既定で "East US 2" を使用します。(※ Azure Portal にて作成)
+1. 作成を確定します。
 
 ![Create Project Details](assets/04-create-project-details.png)
 
-## Step 5: Create In Progress
+## Step 5: プロジェクトの作成中
 
-The process takes a few minutes.
+この処理には数分かかります。
 
 ![Create In Progress](assets/05-create-in-progress.png)
 
-## Step 6: Project Created
+## Step 6: プロジェクト作成完了
 
-You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it later.
+Foundry プロジェクトのランディングページが表示されます。**ここに表示される プロジェクトエンドポイント の情報を控えておいてください**。後で使用します。
 
 ![Project Created](assets/06-project-created.png)
 
-## Step 7: Create Agent
+## Step 7: エージェントを作成
 
-Click "Create agent" to continue into the agent creator workflow. Give your agent a recognizable name - `contoso-travel-portal`
+"エージェントの作成" をクリックして、エージェント作成フローに進みます。エージェント名は識別しやすい `contoso-travel-portal` にします。
 
 ![Create Agent](assets/07-create-agent.png)
 
-## Step 8: Create In Progress
+## Step 8: 作成中
 
-This takes a few minutes to complete
+完了まで数分かかります。
 
 ![Create In Progress](assets/08-create-in-progress.png)
 
-## Step 9: Agent Playground Ready
+## Step 9: エージェント の準備完了 & プレイグラウンドの表示
 
-The agent is now ready to test in playground. Note: If you do _not_ see the Tools pane showing the "Web Search" tool by default, simply click the Tools drop down and activate the Web Search toggle to use _Grounding with Bing_. You should then see the same experience below.
+これで プレイグラウンド でエージェントをテストできます。注: 既定で Tools ペインに "Web 検索" ツールが表示されない場合は、Tools の追加ボタンをクリックしてドロップダウンから Web 検索 を有効化して使ってください。すると、以下と同じ表示になります。
 
 ![Agent Playground Ready](assets/09-agent-playground-ready.png)
 
-## Step 10: Create App Insights
+## Step 10: App Insights を作成
 
-But first, select the Traces tab. **Save the agent if you are prompted to do so** before your switch.
-You should see the view below. Click "Connect" to create and connect the App Insights resource. 
+まず Traces タブを選択します。切り替える前に **保存を求められたらエージェントを保存** してください。
+App Insights が未接続で以下の画面が表示される場合は、"Connect" をクリックして App Insights リソースを作成し、接続します。(作成、接続済みの場合は Step 13 に進みます)
 
 ![Create App Insights](assets/10-create-app-insights.png)
 
 
-## Step 11: Create App Insights Detail
+## Step 11: App Insights の詳細を入力
 
-Fill in details. Use the provided default names - make sure it has created a new Log Analytics workspace as well.
+詳細を入力します。表示される既定名を使用し、Log Analytics ワークスペースも新規作成されていることを確認してください。
 
 ![Create App Insights Detail](assets/11-create-app-insights-detail.png)
 
-## Step 12: Confirm Creation
+## Step 12: 作成を確認
 
-Click create when complete
+入力が完了したら Create をクリックします。
 
 ![Confirm Creation](assets/12-confirm-creation.png)
 
-## Step 13: App Insights Created
+## Step 13: App Insights 作成完了
 
-App Insights has been created. You can verify this at any time by clicking on the project name drop-down menu (top left) and looking for _Project Details_. In that details page, click the _Connected Resources_ tab and you should see a new resource created and connected to your project.
+App Insights が作成されました。確認するには、画面左上のプロジェクト名ドロップダウンから _プロジェクトの詳細_ を開きます。詳細ページの _概要_ タブで、新しいリソースが作成され、プロジェクトに接続されていること(メトリックス)を確認できます。
 
 ![App Insights Created](assets/13-app-insights-created.png)
 
-## Step 14: Test Agent Prompt
+## Step 14: エージェントプロンプトをテスト
 
-Return to agent playground - update the agent instructions as follows:
+エージェント プレイグラウンド に戻ります。画面右上の _ビルド_ をクリック、_エージェント_ タブを開きます。先ほど作成したエージェントを選択します。
+エージェント指示(手順)を次の内容に更新します。
 
 ```bash
 あなたは Contoso Travel のコンシェルジュです。親しみやすく、知識豊富なトラベルアシスタントとして振る舞ってください。
@@ -116,175 +118,175 @@ Return to agent playground - update the agent instructions as follows:
 回答は的確で、お客様の役に立つ内容にしてください。
 ```
 
-- **Save the agent** - see the version number change.
-- Try asking a question: `Hi. I'm thinking about planning a trip to Paris. What should I know?`
-- Observe the response. Does it match the guidance in instructions?
+- **エージェントを保存** し、バージョン番号が変わることを確認します。
+- 次の質問を試します: `こんにちは。パリ旅行を計画しようと思っています。準備しておいたほうがよいことを教えてください。`
+- 応答を確認し、指示内容に沿っているかを見ます。
 
 ![Test Agent Prompt](assets/14-test-agent-prompt.png)
 
-## Step 15a: View Agent Metrics
+## Step 15a: エージェントメトリクスを確認
 
-1. Click on the Metrics link above the response panel - it shows you available evaluators.
-1. Customize the list to reflect evaluation criteria you want to use - save the agente.g., add safety evals.
-1. Try a new request. `I want to book a week long vacation to Paris for a group of 3, leaving Seattle Jul 3`
+1. 応答パネル上部の Metrics リンクをクリックすると、利用可能な evaluator が表示されます。
+1. 使いたい評価基準に合わせて一覧をカスタマイズし、エージェントを保存します（例: 安全性評価を追加）。
+1. 新しいリクエストを試します。`3人でパリに1週間滞在したく、7/3にシアトルを出発する旅行を予約したいです。`
 
 
 ![View Agent Metrics](assets/15-view-agent-metrics.png)
 
-## Step 15b: View Agent Response
+## Step 15b: エージェント応答を確認
 
-1. View the agent response. Note the metrics below the response line.
-1. Observe the _AI Quality_ and _Safety_ metrics in the line below the response. 
-1. Hover over each number - you should see the custom metrics used and their Pass/Fail status
+1. エージェントの応答を確認し、応答行の下にあるメトリクスに注目します。
+1. 応答下部の _AI 品質_ と _安全性_ メトリクスを確認します。
+1. 各数値にマウスオーバーすると、使用されたカスタムメトリクスと Pass/Fail 状態が表示されます。
 
 ![View Agent Response](assets/15-view-agent-response.png)
 
-## Step 16: Configure Agent Properties
+## Step 16: エージェントのプロパティを設定
 
-You can configure the agent properties for better impact - e.g., set default starter prompts aligned to use case. Click the gear icon to get started - and try using this data:
+より効果的な入力を促すため、エージェントのプロパティを設定できます。例えばユースケースに合わせて既定のスタータープロンプトを設定します。歯車アイコン(_構成_) をクリックして開始し、次の内容を試してください。
 
-1. Display Name: `Contoso Travel Assistant`
-1. Description: `Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the numnber of travellers in your group - and we'll do the rest.`
-1. Add starter prompts:
-    - `I want to plan a multi-day travel itinerary`
-    - `I want to rent a car at my travel destination`
-    - `I want to book a flight and hotel for my travels`
-1. Don't forget to save the agent.
+1. 表示名: `Contoso Travel アシスタント`
+1. 説明: `Contoso Travel へようこそ。フライト予約、レンタカー、ホテル予約を含む次の旅程計画をお手伝いします。目的地と旅行人数を教えていただければ、残りは私たちにお任せください。`
+1. スタータープロンプト:
+    - `複数日にわたる旅行プランを立てたいです`
+    - `旅行先でレンタカーを借りたいです`
+    - `旅行のフライトとホテルを予約したいです`
+1. エージェントの保存を忘れないでください。
 
 ![Configure Agent Properties](assets/16-configure-agent-properties.png)
 
-## Step 17: Review Configured Agent
+## Step 17: 設定済みエージェントを確認
 
-View the updated playground look by starting a new chat session. You should see the newly configured agent.
+新しいチャットセッションを開始し、更新されたプレイグラウンド表示を確認します。新しく設定したエージェントが表示されます。
 
 ![Review Configured Agent](assets/17-review-configured-agent.png)
 
-## Step 18: Test Configured Agent
+## Step 18: 設定済みエージェントをテスト
 
-Test one of the starter prompts by clicking on it.
+スタータープロンプトのいずれかをクリックしてテストします。
 
 ![Test Configured Agent](assets/18-test-configured-agent.png)
 
-## Step 19: View Agent Response
+## Step 19: エージェント応答を確認
 
-1. View the response. THe agent will prompt you for addition information as instructed. 
-1. Add your responses. This is creating a conversation with state.
-1. Note how the agent remembers and uses context from the history.
+1. 応答を確認します。指示に沿って、エージェントが追加情報を求めてきます。
+1. あなたの回答を入力します。これにより状態(ステート)を持つ会話が作られます。
+1. 履歴の文脈をエージェントが記憶し活用していることを確認します。
 
-(You can try reusing the previous prompt of `I want to book a week long vacation to Paris for a group of 3, leaving Seattle Jul 3`). Your response may differ from the screenshot in both content and references - that's expected due to the stochastic behaviors of LLMs.
+（前のプロンプト `3人でパリに1週間滞在したく、7/3にシアトルを出発する旅行を予約したいです。` を再利用しても構いません。）応答内容や参照先はスクリーンショットと異なる場合がありますが、これは LLM の確率的特性によるもので正常です。
 
 ![View Agent Response](assets/19-view-agent-response.png)
 
-## Step 20: View Agent Trace
+## Step 20: エージェントのトレースを確認
 
-1. Click the Traces tab - you should see rows for each conversation run
-1. Click on the Trace ID - you should see something like this:
+1. Traces タブをクリックすると、会話実行ごとの行が表示されます。
+1. Trace ID をクリックすると、次のような画面が表示されます。
 
     ![View Agent Response](assets/20-view-agent-trace.png)
 
 
-1. Want to understand what the Trace ID is showing - try clicking the **Ask AI** button:
+1. Trace ID の内容を理解するために、**AI で検索** ボタンをクリックして次を試します。
     ```bash
-    Explain what the trace ID is showing
+    trace ID で表示されている内容を説明して
     ```
 
-1. You might get something like this:
+1. 次のような説明が得られます。
     ```bash
-    In Azure AI Foundry, a trace ID is a unique identifier that represents a single trace, which captures the journey of a workflow or operation through the system. The trace consists of multiple spans, each representing a discrete operation or step within that workflow, including start and end times, metadata, and hierarchical relationships.
+    Azure AI Foundry における trace ID は、システム内を流れるワークフローや処理の経路を記録した 1 件のトレースを識別する一意の ID です。トレースは複数のスパンで構成され、各スパンは開始・終了時刻、メタデータ、親子関係を含む個別の処理ステップを表します。
 
-    The trace ID helps you track and correlate all related spans and telemetry data for a particular request or workflow execution. This is especially useful for troubleshooting and diagnosing issues, as it allows you to see the detailed sequence of operations, inputs, outputs, and any anomalies or errors that occurred during the execution.
+    trace ID を使うと、特定のリクエストやワークフロー実行に関連するスパンとテレメトリを追跡・相関できます。これはトラブルシューティングや障害解析に特に有用で、実行時の処理順序、入力、出力、異常、エラーを詳細に確認できます。
 
-    For example, if you encounter an error or unexpected output in an agent conversation or evaluation run, the trace ID lets you locate the exact trace in Application Insights or your monitoring system. You can then analyze the spans within that trace to understand where the execution diverged or failed, what inputs were processed, and what outputs were generated at each step.
+    例えば、エージェント会話や評価実行でエラーや想定外の出力が起きた場合、trace ID から Application Insights や監視基盤で該当トレースを特定できます。そこでスパンを分析すると、どの時点で実行が分岐・失敗したか、どの入力が処理され、どの出力が生成されたかを確認できます。
 
-    To use tracing effectively in Azure AI Foundry:
+    Azure AI Foundry でトレースを有効活用するには:
 
-    Enable tracing in your project by linking it to an Azure Application Insights resource.
-    Collect trace data and system metrics for your workflows and agents.
-    Use the trace ID to search and analyze traces in Application Insights or other telemetry tools.
-    Review spans and attributes within the trace to pinpoint issues or performance bottlenecks.
-    In summary, the trace ID is a key tool for observability in Azure AI Foundry, providing deep visibility into the internal execution of your AI workflows and enabling precise troubleshooting and performance analysis.
+    プロジェクトを Azure Application Insights に接続してトレースを有効化する。
+    ワークフローやエージェントのトレースデータとシステムメトリクスを収集する。
+    trace ID を使って Application Insights などでトレースを検索・分析する。
+    トレース内のスパンと属性を確認し、問題箇所や性能ボトルネックを特定する。
+    つまり trace ID は、Azure AI Foundry の可観測性における重要な鍵であり、内部実行を深く可視化して、精度の高い障害解析と性能分析を可能にします。
     ```
 
-1. **Tip: Use Ask AI to explain things you see in the Portal**. It understands your account state and can give you meaningful insights that will build your intuition in the context of your current developer workflow. It's a good way to diagnose issues and discover information intuitively.
-    - For instance, try copying the trace (waterfall text) from the trace ID view and paste it into the Ask AI chat. Ask `Can you analyze the trace and give me insights and explain the components` to build your intuition for spans and trace logs.
+1. **ヒント: ポータルで見えている内容の説明に _AIで検索_ を活用しましょう。** _AIで検索_ はあなたのアカウント状態を理解し、現在の開発フローに即した有益な示唆を返してくれます。問題診断や情報発見に有効です。
+    - 例えば、Trace ID 画面のトレース（ウォーターフォール表示テキスト）をコピーして _AIで検索_ に貼り付け、`このトレースを分析して、構成要素の説明とインサイトを教えてください` と質問してみてください。スパンやトレースログの理解が深まります。
 
-## Step 21: View Conversation Trace
+## Step 21: 会話トレースを確認
 
-1. You can also view conversation history. Note how we have the same conversation ID but multiple trace ID logs. Each represents one turn of the conversation, with conversation history maintained for later turns.
-1. Try asking about what this represents. You may see something like this:
+1. 会話履歴も確認できます。同じ Conversation ID に対して複数の Trace ID ログがあることに注目してください。各ログは会話の1ターンを表し、後続ターンのために会話履歴が保持されます。
+1. これが何を表すか _AIで検索_ に尋ねると、次のような説明が得られます。
     ```bash
-    A Conversation ID in Azure AI Foundry represents the persistent context of an end-to-end dialogue history between a user and an agent. It uniquely identifies a conversation session, allowing you to track and review the entire interaction, including messages, tool calls, responses, and tokens exchanged during that session.
+    Azure AI Foundry の Conversation ID は、ユーザーとエージェントのエンドツーエンド対話履歴における永続的な文脈を表します。会話セッションを一意に識別し、メッセージ、ツール呼び出し、応答、トークン利用を含む相互作用全体を追跡・確認できます。
 
-    You can use the Conversation ID to:
+    Conversation ID でできること:
 
-    View conversation history details and response information.
-    Inspect ordered actions, run steps, and tool calls.
-    Analyze inputs and outputs between the user and the agent.
-    Conversations are durable and can be reused across sessions, enabling multi-turn and cross-session continuity without rebuilding context manually. This makes debugging and managing conversations easier.
+    会話履歴の詳細や応答情報を確認する。
+    実行アクションの順序、ステップ、ツール呼び出しを検査する。
+    ユーザーとエージェント間の入出力を分析する。
+    会話は永続化され、セッションをまたいで再利用できるため、手動で文脈を再構築せずにマルチターン継続が可能です。これによりデバッグと会話管理が容易になります。
 
-    In the Foundry portal, you can search for a Conversation ID to review the full conversation and its related trace data, helping you understand the flow and outcome of the interaction.
+    Foundry ポータルでは Conversation ID で検索し、会話全体と関連するトレースデータを確認できます。これにより、やり取りの流れと結果を把握できます。
 
-    This concept is distinct from a Trace ID, which tracks the technical execution of a workflow or operation, while the Conversation ID focuses on the dialogue context and content.
+    なお、これは Trace ID とは別概念です。Trace ID はワークフローや処理の技術的実行を追跡し、Conversation ID は対話の文脈と内容に焦点を当てます。
     ```
 
-1. Note that we now have **trace-linked evaluations** - for any trace ID, you can click the Evaluations tab (right pane) to see the evaluators used and the AI quality scores assessed - along with explainers for why this score was given. This allows us to accelerate the closing of the loop between issue detection (eval metrics) and diagnosis (trace logs). For insance, we may see that AI quality drops when we upgrade a model - and looking at the trace, we may diagnose that the new model was not invoking the right tools.
+1. 現在は **trace-linked evaluations** が利用できます。任意の Trace ID で右ペインの Evaluations タブを開くと、使用された evaluator、AI 品質スコア、そのスコア理由の説明を確認できます。これにより、問題検出（評価メトリクス）と原因診断（トレースログ）のループを高速に回せます。例えば、モデル更新で AI 品質が低下した場合でも、トレースを見て「新モデルが正しいツールを呼び出していない」といった診断が可能になります。
 
     ![View Conversation Trace](assets/21-view-conversation-trace.png)
 
-## Step 22: Preview Agent
+## Step 22: エージェントをプレビュー
 
-The preview agent option gives you a UI for your agent (think web app)
+Preview agent オプションを使うと、エージェント用 UI（Web アプリのような画面）を確認できます。
 
 ![Preview Agent](assets/22-preview-agent.png)
 
-## Step 23: Test Preview
+## Step 23: プレビューをテスト
 
-Note that the preview shows configured starter prompts. 
+プレビューには設定済みのスタータープロンプトが表示されます。
 
 ![Test Preview](assets/23-test-preview.png)
 
-## Step 24: Review Response
+## Step 24: 応答を確認
 
-You can review the agent response in the preview tab itself
+プレビュータブ上でエージェント応答を確認できます。
 
 ![Review Response](assets/24-review-response.png)
 
-## Step 25: Review Trace
+## Step 25: トレースを確認
 
-But note that if you return to agent you can now see this interaction captured in the traces as well. You should be able to compare metrics between this run and the previous one (from Playground) to get an intuition for performance. _Note that this preview does not run the evaluations for you by default_.
+エージェント画面に戻ると、このやり取りもトレースに記録されていることがわかります。この実行と前回（Playground）の実行メトリクスを比較し、性能の感覚を掴んでください。_このプレビューは既定では評価を自動実行しません。_
 
 ![Review Trace](assets/25-review-trace.png)
 
-**Your Foundry project is ready - and it is configured for App Insights and activated correctly.**
+**これで Foundry プロジェクトの準備は完了です。App Insights の構成と有効化も正しく行われています。**
 
-## Step 26: Explore Evaluations Tab
+## Step 26: Evaluations タブを確認
 
-By now you should have a sense for the _Tracing_ and _Evaluations_ capabilities in the agent playground. Microsoft Foundry has a large number of built-in evaluators that you can also invoke _code-first_.
+ここまでで、エージェント Playground の _Tracing_ と _Evaluations_ の機能感が掴めてきたはずです。Microsoft Foundry には多数の組み込み evaluator があり、_code-first_ でも呼び出せます。
 
-1. Click on the Evaluations item in the sidebar menu. 
-1. Select the _Evaluators catalog_ to see the full list of supported evaluators
-1. Filter to see evaluators for a particular category - e.g., agents
-1. Use "Ask AI" to get explanations for any of them - e.g., ask:
+1. サイドバーメニューの Evaluations をクリックします。
+1. _Evaluators catalog_ を選択し、サポートされている evaluator 一覧を確認します。
+1. フィルターでカテゴリ（例: agents）ごとの evaluator を表示します。
+1. "_AIで検索_" で各 evaluator の説明を取得できます。例:
     ```bash
-    tell me more about the Protected-Material evaluator
+    Protected-Material evaluator について詳しく教えて
     ```
 
     ![Review Evals](assets/28-evaluations-catalog.png)
 
-1. Click the _Create_ button. You should see this dialog. This is the workflow to create a _custom evaluator_ to cover criteria specific to your requirements that are not covered by built-in evaluators. **We won't use that here - but explore this on your own at home!**
+1. _Create_ ボタンをクリックすると、このダイアログが表示されます。これは、組み込み evaluator ではカバーできない独自要件を満たす _custom evaluator_ を作成するためのフローです。**このラボでは使用しませんが、ぜひ後で試してみてください。**
 
     ![Review Custom Eval](assets/28-evaluations-custom.png)
 
 
-## Step 27: Run a Red Teaming Scan
+## Step 27: Red Teaming スキャンを実行
 
-1. Click on the _Evaluations_ tab in the **sidebar** of the Portal. This takes you to Evaluations across the project (not specific to that agent)
-1. Click on the Red Teaming tab
+1. ポータル **サイドバー** の _Evaluations_ タブをクリックします。エージェント単位ではなく、プロジェクト全体の Evaluations に移動します。
+1. Red Teaming タブをクリックします。
     ![Red Teaming](assets/29-red-teaming-create.png)
-1. For now, select the _Model_ option and pick the default model used in your agent (e.g, gpt-4.1)
-1. Walk through the dialog and select at most 1-2 options for risk categories and attack strategies (just to have scan complete).
-1. Submit the scan. This takes a while to complete - we will revisit it later.
+1. ここでは _Model_ オプションを選び、エージェントで使っている既定モデル（例: gpt-4.1）を指定します。
+1. ダイアログを進め、リスクカテゴリと攻撃戦略は完了を優先して 1〜2 個程度に絞って選択します。
+1. スキャンを送信します。完了まで時間がかかるため、後で再度確認します。
 
-## Next: Set Up Dev Environment
+## 次へ: 開発環境をセットアップ
 
-Now that your infrastructure is ready - let's [Setup Development Environment](./lab-01-setup-codespaces.md) next.
+インフラの準備ができたので、次は [開発環境のセットアップ](./lab-01-setup-codespaces.md) に進みます。
